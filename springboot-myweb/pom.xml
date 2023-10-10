@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<!-- 부모 스타터 -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -10,9 +10,9 @@
 		<version>2.7.16</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>	
-	
+
 	<groupId>com.poscodx.springboot</groupId>
-	<artifactId>springboot-myapplication</artifactId>
+	<artifactId>springboot-myweb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
@@ -20,12 +20,31 @@
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
 		<java.version>17</java.version>
 	</properties>
-	
+
 	<dependencies>
-		<!-- Spring Boot Basic Dependency -->
+		<!-- Spring Boot Dev Tools: Live Reload -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
+		<!-- Spring Web Starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- jstl -->
+		<dependency>
+		    <groupId>jstl</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>
+
+		<!-- Tomcat Jasper -->
+		<dependency>
+		    <groupId>org.apache.tomcat.embed</groupId>
+		    <artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
 
 		<!-- Spring Boot Test Integration -->
@@ -35,8 +54,8 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
-		<finalName>springboot-myapplication</finalName>
+		<finalName>springboot-myweb</finalName>
 	</build>	
 </project>
